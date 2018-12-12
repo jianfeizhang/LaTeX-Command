@@ -3,64 +3,6 @@
 % version 3.2
 % Oct 27, 2018
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\DeclareMathOperator*{\argmin}{\arg\!\min}
-\DeclareMathOperator*{\argmax}{\arg\!\max}
-% \newcommand{\notimplies}{%
-%   \mathrel{{\ooalign{\hidewidth$\not\phantom{=}$\hidewidth\cr$\implies$}}}}
-\newcommand{\textbi}[1]{\textbf{\textit{#1}}}
-\newcommand{\tb}[1]{{\fontseries{b}\selectfont #1}}
-\newcommand{\Ubracket}{\underbracket[.3pt][1pt]}
-\newcommand{\chfrac}[2]{\genfrac{}{}{.6pt}{}{\;#1\;}{\;#2\;}}
-\newcommand{\diag}{\mathsf{diag}}
-\newcommand{\dsf}{\mathsf{d}}
-
-\newcommand{\mathds}[1]{\text{\usefont{U}{dsrom}{m}{n}#1}}% do not use the dsfont package as it is already defined here
-\newcommand{\1}{\textbf{1}}
-\newcommand{\0}{\textbf{0}}
-\newcommand{\<}{\left\langle}
-\renewcommand{\>}{\right\rangle}
-\renewcommand{\:}{\vcentcolon}
-\newcommand{\Cdot}{\raisebox{-.42ex}{\scalebox{1.7}{$\cdot$}}}
-\newcommand{\CDot}{\raisebox{-.5ex}{\scalebox{2}{$\cdot$}}}
-% \newcommand{\Sharp}{{\settoheight{\dimen0}{C}\kern-0em \resizebox{!}{\dimen0}{\raisebox{\depth}{\textbf{\#}}}}}
-% \LetLtxMacro{\oldsqrt}{\sqrt}
-% \renewcommand{\sqrt}[1][\;]{%
-% \def\DHLindex{#1}\mathpalette\DHLhksqrt}
-% \def\DHLhksqrt#1#2{%
-% \setbox0=\hbox{$#1\oldsqrt[\DHLindex]{#2\,}$}\dimen0=\ht0
-% \advance\dimen0-0\ht0
-% \setbox2=\hbox{\vrule height\ht0 depth -\dimen0}%
-% {\box0\lower0.4pt\box2}}
-
-%-------------------------------------
-\makeatletter
-\DeclareFontEncoding{LS1}{}{}
-\DeclareFontEncoding{LS2}{}{\@noaccents}
-\makeatother
-
-\DeclareFontSubstitution{LS1}{stix}{m}{n}
-\DeclareFontSubstitution{LS2}{stix}{m}{n}
-\DeclareSymbolFont{symbols2}{LS1}{stixfrak}{m}{n}
-\DeclareSymbolFont{largesymbolsstix}{LS2}{stixex}{m}{n}
-
-\DeclareMathDelimiter{\lbrbrak}{\mathopen}{largesymbolsstix}{"EE}{largesymbolsstix}{"14}
-\DeclareMathDelimiter{\rbrbrak}{\mathclose}{largesymbolsstix}{"EF}{largesymbolsstix}{"15}
-
-\DeclareMathDelimiter{\lParen}{\mathopen}{largesymbolsstix}{"DE}{largesymbolsstix}{"02}
-\DeclareMathDelimiter{\rParen}{\mathclose}{largesymbolsstix}{"DF}{largesymbolsstix}{"03}
-
-\DeclareMathDelimiter{\lgroup}{\mathopen}{largesymbolsstix}{"DC}{largesymbolsstix}{"6A}
-\DeclareMathDelimiter{\rgroup}{\mathclose}{largesymbolsstix}{"DD}{largesymbolsstix}{"6B}
-
-% \DeclareMathSymbol{\lcurvyangle}{\mathopen}{symbols2}{"E9}
-% \DeclareMathSymbol{\rcurvyangle}{\mathclose}{symbols2}{"EA}
-
-\let\oldexp\exp
-\renewcommand{\exp}[1]{\oldexp\left\lbrbrak #1\right\rbrbrak}
-\newcommand{\one}[1]{\mathds{1}\left\lParen #1\right\rParen}
-
-%-----------------------------------
-
 \makeatletter
 
 \@tfor\next:=agktwxyz\do{% sans sb
